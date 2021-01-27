@@ -1,0 +1,11 @@
+[Unit]
+Description=GPIO Service
+
+[Service]
+ExecStart=/usr/bin/gpio -l -i 1 -o 2
+StandardOutput=journal
+StandardError=journal
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
